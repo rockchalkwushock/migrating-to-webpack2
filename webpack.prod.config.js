@@ -1,3 +1,5 @@
+require('dotenv-safe').load();
+
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -60,7 +62,9 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
+        NODE_ENV: JSON.stringify('production'),
+        CLOUD_NAME: JSON.stringify(process.env.CLOUD_NAME),
+        UPLOAD_PRESET: JSON.stringify(process.env.UPLOAD_PRESET),
       }
     }),
     new webpack.optimize.CommonsChunkPlugin({
