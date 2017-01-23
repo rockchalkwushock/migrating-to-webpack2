@@ -1,16 +1,17 @@
 import express from 'express';
+import { Server } from 'http';
 import path from 'path';
 import { dbConfig, middlewaresConfig } from './config';
 
 const app = express();
 
+// ENVIRONMENT VARIABLES
 const MODE = process.env.NODE_ENV;
-const PORT = process.env.PORT || 3000;
-
-// routes here
+export const PORT = process.env.PORT || 3000;
 
 let mongoConf;
 
+// NODE ENVIRONMENT SETUP
 switch (MODE) {
   case 'production': {
     app.use(express.static('dist'));
@@ -21,11 +22,11 @@ switch (MODE) {
     break;
   }
   case 'test': {
-    // set db here
+    mongoConf = 'mongodb://localhost/photography-dev';
     break;
   }
   default: {
-    // set db here
+    mongoConf = 'mongodb://localhost/photography-dev';
     break;
   }
 
@@ -37,7 +38,9 @@ dbConfig(mongoConf);
 // MIDDLEWARE
 middlewaresConfig(app);
 
-app.listen(PORT, err => {
+// EXPRESS SERVER
+export const server = Server(app);
+server.listen(PORT, err => {
   if (err) { return console.error(err); }
 
   console.log(`App running to port: ${PORT} in ${MODE}`);
