@@ -65,7 +65,7 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production'),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
         CLOUD_NAME: JSON.stringify(process.env.CLOUD_NAME),
         UPLOAD_PRESET: JSON.stringify(process.env.UPLOAD_PRESET),
       }
@@ -75,7 +75,6 @@ module.exports = {
     }),
     new DashboardPlugin(),
     new HtmlWebpackPlugin({
-      title: 'Boilerplate',
       template: 'public/index.html'
     }),
     new webpack.HotModuleReplacementPlugin(),
