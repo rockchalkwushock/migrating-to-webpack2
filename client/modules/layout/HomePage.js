@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { IntlActions, withTranslate } from 'react-redux-multilingual';
 import { Flag } from 'semantic-ui-react';
+import { VisibleOnlyIfNotUser } from '../auth/wrapper';
 import { store } from '../../redux/store';
 
 const HomePage = ({ translate }) => (
@@ -25,4 +26,4 @@ HomePage.propTypes = {
   translate: PropTypes.func
 };
 
-export default withTranslate(HomePage);
+export default VisibleOnlyIfNotUser(withTranslate(HomePage));

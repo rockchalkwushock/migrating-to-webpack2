@@ -10,6 +10,8 @@ const UserIsAuthenticated = UserAuthWrapper({
   wrapperDisplayName: 'UserIsAuthenticated'
 });
 
-const AuthViews = UserIsAuthenticated(({ children }) => children);
+// const AuthViews = UserIsAuthenticated(({ children }) => children);
+//
+// export default AuthViews;
 
-export default AuthViews;
+export default UserIsAuthenticated;
