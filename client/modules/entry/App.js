@@ -4,7 +4,9 @@ import { Footer, Navbar } from '../layout';
 
 class App extends Component {
   componentWillMount() {
-    this.props.checkToken();
+    if (this.props.auth.user) {
+      this.props.checkToken();
+    }
   }
   render() {
     const { auth, children, location, logoutUser } = this.props;
