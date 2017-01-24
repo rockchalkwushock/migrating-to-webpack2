@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux/es';
 import { withTranslate } from 'react-redux-multilingual';
 import Library from './Library';
 import { getFromBackEnd } from '../actions';

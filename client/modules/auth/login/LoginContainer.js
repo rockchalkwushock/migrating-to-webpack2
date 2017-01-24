@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux/es';
 import { withTranslate } from 'react-redux-multilingual';
 import { VisibleOnlyIfNotUser } from '../wrapper';
 import Login from './Login';

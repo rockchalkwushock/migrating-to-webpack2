@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { browserHistory } from 'react-router';
+import { browserHistory } from 'react-router/es';
 
 export const unAuthUser = () => {
   const promise = new Promise(resolve => {

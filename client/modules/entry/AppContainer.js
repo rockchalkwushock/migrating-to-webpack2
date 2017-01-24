@@ -1,4 +1,4 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redux/es';
 import { checkToken, logoutUser } from '../auth/actions';
 import '../../utils/axiosConfigs';
 import App from './App';

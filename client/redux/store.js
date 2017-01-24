@@ -1,9 +1,9 @@
-import { applyMiddleware, createStore, compose } from 'redux';
+import { applyMiddleware, createStore, compose } from 'redux/es';
 import { middleware as reduxPackMiddleware } from 'redux-pack';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
-import { browserHistory } from 'react-router';
+import { browserHistory } from 'react-router/es';
 import promise from 'redux-promise-middleware';
-import { throttle } from 'lodash';
+import throttle from 'lodash/throttle';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { loadState, saveState } from '../utils/localStorage';
 import rootReducer from './reducers';

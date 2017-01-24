@@ -1,5 +1,5 @@
 import React, { PropTypes } from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm } from 'redux-form/es';
 import { Button, Form, Grid, Message } from 'semantic-ui-react';
 import { InputField } from '../../../commons';
 import { loginValidation } from './validate';

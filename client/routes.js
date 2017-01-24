@@ -1,5 +1,5 @@
 import React from 'react';
-import Router from 'react-router/lib/Router';
+import { Router } from 'react-router/es';
 import { history } from './redux/store';
 import { AppContainer, HomePage } from './modules';
 

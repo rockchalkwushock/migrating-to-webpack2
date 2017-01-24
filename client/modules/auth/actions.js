@@ -1,5 +1,5 @@
 import { toastr } from 'react-redux-toastr';
-import { browserHistory } from 'react-router';
+import { browserHistory } from 'react-router/es';
 import { CHECK_TOKEN, LOGIN_USER, LOGOUT_USER, SIGNUP_USER } from './types';
 import { getTokenFromRedux } from '../../utils';
 import {

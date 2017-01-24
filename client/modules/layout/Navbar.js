@@ -1,6 +1,6 @@
 import React, { PropTypes } from 'react';
 import { withTranslate } from 'react-redux-multilingual';
-import { browserHistory } from 'react-router';
+import { browserHistory } from 'react-router/es';
 import { Menu } from 'semantic-ui-react';
 
 const styles = {

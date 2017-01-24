@@ -1,5 +1,5 @@
 import React from 'react';
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux/es';
 import { IntlProvider } from 'react-redux-multilingual';
 import ReduxToastr from 'react-redux-toastr';
 import { store } from './redux/store';
