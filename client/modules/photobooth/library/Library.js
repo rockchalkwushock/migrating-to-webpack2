@@ -9,7 +9,6 @@ class Library extends Component {
   }
   render() {
     const { photos, translate } = this.props;
-    console.log(photos);
     if (!photos.isFetched) return <LoadingScreen />;
 
     // Where array of object(s) is processed for rendering/re-rendering.
