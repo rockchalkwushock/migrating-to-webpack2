@@ -3,12 +3,13 @@ import { Image, Label } from 'semantic-ui-react';
 import { LoadingScreen } from '../../../commons';
 
 class Library extends Component {
-  componentWillMount() {
+  componentDidMount() {
     // perform GET Request for appending images.
     this.props.getFromBackEnd();
   }
   render() {
     const { photos, translate } = this.props;
+    console.log(photos);
     if (!photos.isFetched) return <LoadingScreen />;
 
     // Where array of object(s) is processed for rendering/re-rendering.

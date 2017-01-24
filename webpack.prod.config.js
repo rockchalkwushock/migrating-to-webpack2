@@ -7,11 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const VENDOR_LIBS = [
-  'axios', 'lodash', 'react', 'react-dom', 'react-redux',
-  'react-redux-multilingual', 'react-redux-toastr', 'react-router',
-  'react-router-redux', 'redux', 'redux-auth-wrapper',
-  'redux-devtools-extension', 'redux-form', 'redux-pack',
-  'redux-promise-middleware', 'semantic-ui-react'
+  'react'
 ];
 
 module.exports = {
@@ -42,23 +38,7 @@ module.exports = {
       }
     ]
   },
-  performance: {
-    hints: false
-  },
   devtool: 'inline-source-map',
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: true,
-    port: 9000,
-    hot: true,
-    inline: true,
-    historyApiFallback: true,
-    open: true,
-    quiet: true,
-    proxy: {
-      '/api': 'http://localhost:3000'
-    }
-  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
@@ -79,3 +59,10 @@ module.exports = {
     new ExtractTextPlugin('style.css'),
   ]
 };
+
+//
+// 'axios', 'lodash', 'react', 'react-dom', 'react-redux',
+// 'react-redux-multilingual', 'react-redux-toastr', 'react-router',
+// 'react-router-redux', 'redux', 'redux-auth-wrapper',
+// 'redux-devtools-extension', 'redux-form', 'redux-pack',
+// 'redux-promise-middleware', 'semantic-ui-react'

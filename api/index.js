@@ -9,6 +9,9 @@ const app = express();
 const MODE = process.env.NODE_ENV;
 export const PORT = process.env.PORT || 3000;
 
+// MIDDLEWARE
+middlewaresConfig(app);
+
 let mongoConf;
 
 // NODE ENVIRONMENT SETUP
@@ -34,9 +37,6 @@ switch (MODE) {
 
 // DATABASE
 dbConfig(mongoConf);
-
-// MIDDLEWARE
-middlewaresConfig(app);
 
 // EXPRESS SERVER
 export const server = Server(app);
