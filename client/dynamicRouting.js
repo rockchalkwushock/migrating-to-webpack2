@@ -1,4 +1,5 @@
-import { AppContainer, HomePage } from './modules';
+import AppContainer from './modules/entry/AppContainer';
+import HomePage from './modules/layout/HomePage';
 
 const errorLoading = err => (
   console.error('Dynamic page loading failed', err)
