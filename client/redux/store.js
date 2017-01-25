@@ -3,7 +3,7 @@ import { middleware as reduxPackMiddleware } from 'redux-pack';
 import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { browserHistory } from 'react-router/es';
 import promise from 'redux-promise-middleware';
-import throttle from 'lodash/throttle';
+import throttle from 'lodash-es/throttle';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import { loadState, saveState } from '../utils/localStorage';
 import rootReducer from './reducers';
