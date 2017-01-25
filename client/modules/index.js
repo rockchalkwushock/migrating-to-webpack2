@@ -1,4 +1,3 @@
-export * from './auth';
-export * from './i18n';
-export * from './layout';
-export * from './photobooth';
+export * from './auth'; // authReducer
+export * from './i18n'; // translate
+export * from './photobooth'; // photoReducer

@@ -7,8 +7,4 @@ const VisibleOnlyIfNotUser = UserAuthWrapper({
   failureRedirectPath: '/'
 });
 
-// const NonAuthViews = VisibleOnlyIfNotUser(({ children }) => children);
-//
-// export default NonAuthViews;
-
 export default VisibleOnlyIfNotUser;
