@@ -7,7 +7,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const DashboardPlugin = require('webpack-dashboard/plugin');
 
 const VENDOR_LIBS = [
-  'axios', 'lodash', 'react', 'react-dom', 'react-redux',
+  'axios', 'lodash-es', 'react', 'react-dom', 'react-redux',
   'react-redux-multilingual', 'react-redux-toastr', 'react-router',
   'react-router-redux', 'redux', 'redux-auth-wrapper',
   'redux-form', 'redux-pack', 'redux-promise-middleware',

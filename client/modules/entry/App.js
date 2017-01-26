@@ -31,7 +31,6 @@ App.propTypes = {
   children: PropTypes.element.isRequired,
   location: PropTypes.object.isRequired,
   logoutUser: PropTypes.func.isRequired,
-  translate: PropTypes.func
 };
 
 export default App;
